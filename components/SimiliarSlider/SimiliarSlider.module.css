@@ -1,0 +1,21 @@
+
+.heroSlider .swiper-pagination{
+    position: absolute;
+    text-align: left;
+}
+
+.heroSlider .swiper-pagination-bullets{
+    padding: 0px 30px;
+}
+
+.heroSlider .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+    border: 2px #ffffff solid;
+}
+
+.heroSlider .swiper-pagination-bullet-active{
+    background: white;
+} 

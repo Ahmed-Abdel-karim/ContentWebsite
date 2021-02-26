@@ -1,0 +1,15 @@
+.superTitle{
+    text-align: center;
+    color:var(--text-color) ;
+    font-family:var(--font-family-ar) ;
+    margin: 0px auto ;
+}
+
+.title{
+    text-align: center;
+    color:var(--text-color) ;
+    font-family:var(--font-family-ar) ;
+    margin: 0px auto 45px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}

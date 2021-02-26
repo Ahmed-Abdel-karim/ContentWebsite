@@ -1,0 +1,91 @@
+.RealeStateContainer {
+    text-align: right;
+    max-width: 1366px;
+    width: 80%;
+    margin: 2rem auto 3rem auto;
+    font-weight: 500;
+}
+
+@media (max-width:815px) {
+    .RealeStateContainer {
+        width: 95%;
+        margin: 1.5rem auto 3rem auto;
+    }
+}
+
+.grid {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.grid.en {
+    direction: ltr;
+}
+
+.bg {
+    background: #fbb1161a;
+    width: 100%;
+}
+
+.superTitle {
+    text-align: center;
+    color: var(--main-blue);
+    font-family: var(--font-family-ar);
+    margin: 0px auto;
+}
+
+.title {
+    text-align: center;
+    color: var(--main-blue);
+    font-family: var(--font-family-ar);
+    /* margin: 0px auto 45px; */
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.subTitle {
+    text-align: center;
+    color: var(--main-blue);
+    font-family: var(--font-family-ar);
+    margin: 0px auto 45px;
+    margin-bottom: 1rem;
+}
+
+.swipContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.swipContainer.en {
+    flex-direction: row-reverse;
+}
+
+.swipContainer svg {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.swipContainer svg path {
+    fill: var(--main-blue);
+    fill-opacity: 0.8;
+}
+
+.swipContainer svg:hover path {
+    fill-opacity: 1;
+}
+
+.swipContainer .right.active svg,
+.swipContainer .left svg {
+    cursor: not-allowed;
+}
+
+.swipContainer .right.active svg path,
+.swipContainer .left svg path {
+    opacity: 0.3;
+}
+
+.swipContainer .right svg {
+    transform: rotate(180deg);
+}

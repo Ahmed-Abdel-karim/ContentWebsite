@@ -1,0 +1,111 @@
+.outerLink {
+    width: 98%;
+    height: calc(100vw * (0.98 * 0.66));
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width:678px) {
+    .outerLink {
+        width: 48%;
+        height: calc(80vw * (0.48 * 0.66));
+    }
+}
+
+@media (min-width:1215px) {
+    .outerLink {
+        width: 31.33%;
+        height: calc(80vw * (0.31333 * 0.66));
+
+    }
+}
+
+@media (min-width:1366px) {
+    .outerLink {
+        width: 31.33%;
+        height: calc(1366px* 0.8 * (0.31333 * 0.66));
+
+    }
+}
+
+.ProRealeStateCard {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 3s all ease-in-out;
+}
+
+.outerLink:hover .ProRealeStateCard {
+    transform: scale(1.1);
+}
+
+.overLay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ProRealeStateInfo {
+    position: absolute;
+    z-index: 3;
+    bottom: 10%;
+    right: 5%;
+}
+.ProRealeStateInfo.en {
+    right: auto;
+    left: 5%;
+}
+
+.ProRealeStateName {
+    text-align: right;
+    direction: rtl;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: var(--background-color-light);
+    font-family: var(--font-family-ar);
+    font-size: 30px;
+}
+
+@media (max-width: 786px) {
+    .ProRealeStateName {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+
+    .ProRealeStateCount {
+        margin-top: 1rem;
+    }
+
+    .ProRealeStateCount>span {
+        padding: 0.2rem 1.2rem;
+        font-size: 0.9rem !important;
+    }
+}
+
+.ProRealeStateCount {
+    text-align: right;
+    direction: rtl;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: var(--text-color-test);
+    font-family: var(--font-family-ar);
+    font-weight: 700;
+}
+.ProRealeStateCount.en {
+    direction: ltr;
+    text-align: left;
+}
+
+.ProRealeStateCount>span {
+    background-color: var(--background-color-light);
+    padding: 0.2rem 1.2rem;
+    font-size: 17px;
+}

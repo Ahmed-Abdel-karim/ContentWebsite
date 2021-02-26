@@ -1,0 +1,127 @@
+.outerLink {
+    width: 98%;
+    height: calc(100vw * (0.98 * 0.66));
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@media (min-width:678px) {
+    .outerLink {
+        width: 48%;
+        height: calc(80vw * (0.48 * 0.66));
+    }
+}
+
+@media (min-width:1215px) {
+    .outerLink {
+        width: 31.33%;
+        height: calc(80vw * (0.31333 * 0.66));
+
+    }
+}
+
+@media (min-width:1366px) {
+    .outerLink {
+        width: 31.33%;
+        height: calc(1366px* 0.8 * (0.31333 * 0.66));
+
+    }
+}
+
+.BlogCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+.BlogCard .bg{
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.outerLink .BlogCard img{
+    transform: scale(1);
+    transition: 3s all ease-in-out;
+}
+
+.outerLink:hover .BlogCard img{
+    transform: scale(1.1);
+}
+
+.overLay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.blogName {
+    color: var(--main-blue);
+    font-family: var(--font-family-ar);
+    margin: 0px;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+.blogName.en {
+    text-align: left;
+}
+
+.showBlog {
+    color: var(--main-orange);
+    font-family: var(--font-family-ar);
+    margin: 0px auto;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+@media (max-width:450px) {
+    .blogName {
+        font-size: 14px;
+        margin-bottom: -8px;
+    }
+
+    .showBlog {
+        font-size: 10px;
+    }
+
+}
+
+@media (min-width:451px) and (max-width:819px) {
+    .blogName {
+        font-size: 16px;
+    }
+
+    .showBlog {
+        font-size: 14px;
+    }
+
+}
+
+
+.showBlog:hover {
+    padding-bottom: 0px;
+    border-bottom: 2px var(--main-orange) solid;
+}
+
+.btnContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bloglistinginblog {
+    margin: 0 !important;
+    width: 100% !important;
+}
+.bloglistinginblog .bg {
+    position: relative !important;
+}

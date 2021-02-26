@@ -1,0 +1,134 @@
+.container {
+    width: 100%;
+    height: 75vh;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minicontainer {
+    width: 100%;
+    height: 60vh;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item {
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-color: #3b5a9a;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    direction: rtl;
+}
+.slide.en {
+    direction: ltr;
+}
+.sliderimg,
+.sliderimg div div {
+    width: 100%;
+}
+.slideOverlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: flex-end;
+}
+
+.slideContainer {
+    width: 80%;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+@media (max-width:1450px) {
+    .slideContainer {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .title {
+        font-size: 30px !important;
+        font-weight: 500 !important;
+    }
+
+    .slideContainer {
+        margin-bottom: 20%;
+    }
+
+    .slide {
+        height: 60vh;
+    }
+
+    .container {
+        width: 100%;
+        height: 60vh;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .minicontainer {
+        height: 40vh;
+    }
+}
+
+.superTitle {
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.7rem;
+    color: var(--background-color-light);
+    font-family: var(--font-family-ar);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.title {
+    margin: 0px;
+    color: var(--background-color-light);
+    font-family: var(--font-family-ar);
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* 
+.eventUrl{
+    background-color: var(--background-color-light);
+    color: var(--main-blue);
+    font-family: var(--font-family-ar);
+    padding: 8px 12px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.eventUrl:hover{
+    filter: brightness(0.95);
+} */
+.eventUrl a {
+    background-color: #fff;
+    color: var(--main-blue);
+    font-weight: 600;
+}
+
+.eventUrl a::after {
+    border: 2px solid #fff;
+}
+
+.eventUrl a:hover {
+    background: var(--main-blue);
+    color: #fff;
+}
+
+.eventUrl a:hover::after {
+    border: 2px solid #fff;
+}
