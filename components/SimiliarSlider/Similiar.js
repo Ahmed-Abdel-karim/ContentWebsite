@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./SimiliarSlider.module.css";
 import realstyle from "../Cards/RealStateCard.module.css";
 import { Mobile } from "../MediaQuery/MediaQuery";
+import LazyBackground from "../LazyBackground/LazyBackground";
+
 
 const Similiar = ({ list, lang }) => {
   const chunk = (str, n) => {
@@ -15,7 +17,7 @@ const Similiar = ({ list, lang }) => {
   };
 
   return (
-    <div className={styles.dev}>
+    <LazyBackground className={styles.dev} bgImage={"/graybg.webp"} >
       <div className={styles.container}>
         <div className={styles.sliderContainer}>
           {list &&
@@ -89,7 +91,7 @@ const Similiar = ({ list, lang }) => {
             })}
         </div>
       </div>
-    </div>
+    </LazyBackground>
   );
 };
 

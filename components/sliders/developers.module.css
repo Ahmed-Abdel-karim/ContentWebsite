@@ -1,7 +1,6 @@
 .dev{
     width: 100%;
     /* position: relative; */
-    background-image: url("/graybg.webp");
     background-position: center center;
     padding : 2rem 0;
 }
