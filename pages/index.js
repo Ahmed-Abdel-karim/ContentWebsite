@@ -10,6 +10,7 @@ import UsCard from "../components/Cards/UsCard";
 import UsSection from "../components/Cards/UsSection";
 import HomeBlogs from "../components/home/HomeBlogs";
 
+
 const Home = ({lang, flag}) => {
 
   return (
