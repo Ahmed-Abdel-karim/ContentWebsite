@@ -7,7 +7,6 @@ import SwiperCore, {
   A11y,
   Autoplay,
   EffectFade,
-  lazy,
 } from "swiper";
 import "swiper/swiper-bundle.css";
 import styles from "./heroSlider.module.css";
@@ -57,50 +56,48 @@ const HeroSlider = ({ lang, flag }) => {
     loadData();
   }, [flag]);
 
-  if (data) {
-    return (
-      <div className={`${styles.container} heroSlider`}>
-        <Swiper
-          effect="fade"
-          speed={2000}
-          spaceBetween={0}
-          slidesPerView={1}
-          navigation={false}
-          autoplay={{ delay: 4000, disableOnInteraction: true }}
-          pagination={{ clickable: true }}
-          draggable={true}
-          lazy={true}
-          preloadImages={false}
-        >
-          {data.map((project, idx) => {
-            return (
-              <SwiperSlide key={idx}>
-                <LazyBackground
-                  className={`${styles.slide} ${
-                    lang == "en" ? styles.en : ""
-                  } swiper-lazy`}
-                  bgImage={project.pcImage}
-                  data-background={project.pcImage}
-                >
-                  <div className={styles.slideOverlay}>
-                    <div className={styles.slideContainer}>
-                      <h1 className={styles.title}>{project.title}</h1>
-                      <h1 className={styles.superTitle}>{project.subTitle}</h1>
-                      <div className={styles.eventUrl}>
-                        <Button
-                          path={`${project.link ? project.link : "/"} `}
-                          text={lang == "ar" ? "المزيد" : "More"}
-                        />
-                      </div>
+  return (
+    <div className={`${styles.container} heroSlider`}>
+      <Swiper
+        effect="fade"
+        speed={2000}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation={false}
+        autoplay={{ delay: 4000, disableOnInteraction: true }}
+        pagination={{ clickable: true }}
+        draggable={true}
+        lazy={true}
+        preloadImages={false}
+      >
+        {data.map((project, idx) => {
+          return (
+            <SwiperSlide key={idx}>
+              <LazyBackground
+                className={`${styles.slide} ${
+                  lang == "en" ? styles.en : ""
+                } swiper-lazy`}
+                bgImage={project.pcImage}
+                data-background={project.pcImage}
+              >
+                <div className={styles.slideOverlay}>
+                  <div className={styles.slideContainer}>
+                    <h1 className={styles.title}>{project.title}</h1>
+                    <h1 className={styles.superTitle}>{project.subTitle}</h1>
+                    <div className={styles.eventUrl}>
+                      <Button
+                        path={`${project.link ? project.link : "/"} `}
+                        text={lang == "ar" ? "المزيد" : "More"}
+                      />
                     </div>
                   </div>
-                </LazyBackground>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-    );
-  }
+                </div>
+              </LazyBackground>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
+  );
 };
 export default HeroSlider;

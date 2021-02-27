@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import navStyles from '../Layout/Layout.module.css'
-import Link from 'next/link';
 
 const NavCollapse = ({ listItem, burgerVisability, setBurgerVisability }) => {
     const [open, setopen] = useState(false);
