@@ -60,11 +60,11 @@ const HeroSlider = ({ lang, flag }) => {
     <div className={`${styles.container} heroSlider`}>
       <Swiper
         effect="fade"
-        speed={20000}
+        speed={2000}
         spaceBetween={0}
         slidesPerView={1}
         navigation={false}
-        autoplay={{ delay: 4000, disableOnInteraction: true }}
+        autoplay={{ delay: 40000, disableOnInteraction: true }}
         pagination={{ clickable: true }}
         draggable={true}
         lazy={true}
