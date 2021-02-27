@@ -119,7 +119,7 @@ fbq('track', 'PageView');`,
       )}
 
       <main className={styles.main}>
-        <HeroSlider lang={lang} flag={flag} />
+        {/* <HeroSlider lang={lang} flag={flag} />*/}
 
         <HomeProRealState lang={lang} flag={flag} />
 
