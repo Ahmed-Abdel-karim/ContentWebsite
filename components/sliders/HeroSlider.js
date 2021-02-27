@@ -64,38 +64,50 @@ const HeroSlider = ({ lang, flag }) => {
         spaceBetween={0}
         slidesPerView={1}
         navigation={false}
-        autoplay={{ delay: 40000, disableOnInteraction: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: true }}
         pagination={{ clickable: true }}
         draggable={true}
         lazy={true}
         preloadImages={false}
       >
-        {data.map((project, idx) => {
-          return (
-            <SwiperSlide key={idx}>
-              <LazyBackground
-                className={`${styles.slide} ${
-                  lang == "en" ? styles.en : ""
-                } swiper-lazy`}
-                bgImage={project.pcImage}
-                data-background={project.pcImage}
-              >
-                <div className={styles.slideOverlay}>
-                  <div className={styles.slideContainer}>
-                    <h1 className={styles.title}>{project.title}</h1>
-                    <h1 className={styles.superTitle}>{project.subTitle}</h1>
-                    <div className={styles.eventUrl}>
-                      <Button
-                        path={`${project.link ? project.link : "/"} `}
-                        text={lang == "ar" ? "المزيد" : "More"}
-                      />
+        {data.length ? (
+          data.map((project, idx) => {
+            return (
+              <SwiperSlide key={idx}>
+                <LazyBackground
+                  className={`${styles.slide} ${
+                    lang == "en" ? styles.en : ""
+                  } swiper-lazy`}
+                  bgImage={project.pcImage}
+                  data-background={project.pcImage}
+                >
+                  <div className={styles.slideOverlay}>
+                    <div className={styles.slideContainer}>
+                      <h1 className={styles.title}>{project.title}</h1>
+                      <h1 className={styles.superTitle}>{project.subTitle}</h1>
+                      <div className={styles.eventUrl}>
+                        <Button
+                          path={`${project.link ? project.link : "/"} `}
+                          text={lang == "ar" ? "المزيد" : "More"}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </LazyBackground>
-            </SwiperSlide>
-          );
-        })}
+                </LazyBackground>
+              </SwiperSlide>
+            );
+          })
+        ) : (
+          <SwiperSlide>
+            <div
+              className={`${styles.slide} ${
+                lang == "en" ? styles.en : ""
+              } swiper-lazy`}
+            >
+              <p> ....Loading</p>
+            </div>
+          </SwiperSlide>
+        )}
       </Swiper>
     </div>
   );
