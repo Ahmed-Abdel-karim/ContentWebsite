@@ -27,6 +27,7 @@ const Home = ({ lang, flag }) => {
           />
           <script
             async
+            rel="preconnect"
             src="https://www.googletagmanager.com/gtag/js?id=UA-148363005-1"
           ></script>
           <script
@@ -80,6 +81,7 @@ fbq('track', 'PageView');`,
 
           <script
             async
+            rel="preconnect"
             src="https://www.googletagmanager.com/gtag/js?id=UA-148363005-1"
           ></script>
           <script
@@ -119,7 +121,7 @@ fbq('track', 'PageView');`,
       )}
 
       <main className={styles.main}>
-        {/* <HeroSlider lang={lang} flag={flag} />*/}
+        <HeroSlider lang={lang} flag={flag} />
 
         <HomeProRealState lang={lang} flag={flag} />
 
