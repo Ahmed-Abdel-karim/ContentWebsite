@@ -8,7 +8,7 @@ import SwiperCore, {
   Autoplay,
   EffectFade,
 } from "swiper";
-import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.min.css";
 import styles from "./heroSlider.module.css";
 import Button from "../Button/Button";
 import LazyBackground from "../LazyBackground/LazyBackground";
@@ -60,7 +60,7 @@ const HeroSlider = ({ lang, flag }) => {
     <div className={`${styles.container} heroSlider`}>
       <Swiper
         effect="fade"
-        speed={2000}
+        speed={20000}
         spaceBetween={0}
         slidesPerView={1}
         navigation={false}
